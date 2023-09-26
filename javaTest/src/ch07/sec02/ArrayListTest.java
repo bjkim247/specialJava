@@ -2,6 +2,7 @@ package ch07.sec02;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListTest {
@@ -17,6 +18,15 @@ public class ArrayListTest {
 			strList.add(new String("홍길동" + no));
 		}
 		printArrayList(strArray, strList);
+		
+		
+		//ArrayList >> Iterator변환해서 출력하기
+		System.out.println("=================Iterator======================");
+		Iterator<String> iterator = strList.iterator();
+		while(iterator.hasNext()) {
+			String data = iterator.next();
+			System.out.printf("%s",data);
+		}
 		
 		//해당되는 객체가 존재하는 확인
 		boolean isFind = false;
