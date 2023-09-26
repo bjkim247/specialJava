@@ -2,6 +2,7 @@ package ch07.sec02;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -27,6 +28,17 @@ public class ArrayListTest {
 			String data = iterator.next();
 			System.out.printf("%s",data);
 		}
+		
+		
+		//정렬해서 보여주기
+		System.out.println("\n===============Sort=======================");
+		Collections.sort(strList);
+		printArrayList(strArray, strList);
+		
+		
+		System.out.println("\n===============Reverse Sort=======================");
+		Collections.reverse(strList);
+		printArrayList(strArray, strList);
 		
 		//해당되는 객체가 존재하는 확인
 		boolean isFind = false;
